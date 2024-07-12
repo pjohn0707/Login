@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { ProvedorAutenticacao } from './Components/ContextoAutenticacao';
+import Login from './Components/Login';
+import UsuarioInfo from './Components/UsuarioInfo';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProvedorAutenticacao>
+      <div>
+        <h1>Usuário</h1>
+        <UsuarioInfo /> 
+        <Login />
+      </div>
+    </ProvedorAutenticacao>
   );
-}
+};
 
 export default App;
